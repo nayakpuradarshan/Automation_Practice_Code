@@ -4,7 +4,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 import time
 
-'''
+
 @pytest.fixture(params=["chrome", "firefox"], scope="class")
 def init_driver(request):
     if request.param == "chrome":
@@ -14,7 +14,7 @@ def init_driver(request):
     request.cls.driver = web_driver
     yield
     web_driver.close()
-'''
+
 
 
 @pytest.mark.usefixtures('init_driver')
